@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NRL Round 3 Tips</title>
+</head>
+<body>
+	<h1>NRL Round Tips</h1>
+    <p>Please enter your name and select your tips for the upcoming round of the NRL:</p>
+	
+	<form action="http://localhost:8000/submit" method="post">
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name"><br><br>
+	
+        <form action="http://localhost:8000/submit" method="post">
+		<fieldset>
+			<legend>Round 3 Tips</legend>
+			<p>
+				<label for="game1">Game 1:</label>
+				<select id="game1" name="game1">
+					<option value="">Please select</option>
+					<option value="Sea Eagles">Sea Eagles</option>
+					<option value="Eels">Eels</option>
+				</select>
+			</p>
+			<p>
+				<label for="game2">Game 2:</label>
+				<select id="game2" name="game2">
+					<option value="">Please select</option>
+					<option value="Knights">Knights</option>
+					<option value="Dolphins">Dolphins</option>
+				</select>
+			</p>
+			<p>
+				<label for="game3">Game 3:</label>
+				<select id="game3" name="game3">
+					<option value="">Please select</option>
+					<option value="Roosters">Roosters</option>
+					<option value="Rabbitohs">Rabbitohs</option>
+				</select>
+			</p>
+			<p>
+				<label for="game4">Game 4:</label>
+				<select id="game4" name="game4">
+					<option value="">Please select</option>
+					<option value="Titans">Titans</option>
+					<option value="Storm">Storm</option>
+				</select>
+			</p>
+            <p>
+				<label for="game5">Game 5:</label>
+				<select id="game5" name="game5">
+					<option value="">Please select</option>
+					<option value="Cowboys">Cowboys</option>
+					<option value="Warriors">Warriors</option>
+				</select>
+			</p>
+			<p>
+				<label for="game6">Game 6:</label>
+				<select id="game6" name="game6">
+					<option value="">Please select</option>
+					<option value="Broncos">Broncos</option>
+					<option value="Dragons">Dragons</option>
+				</select>
+			</p>
+			<p>
+				<label for="game7">Game 7:</label>
+				<select id="game7" name="game7">
+					<option value="">Please select</option>
+					<option value="Bulldogs">Bulldogs</option>
+					<option value="Tigers">Tigers</option>
+				</select>
+			</p>
+			<p>
+				<label for="game8">Game 8:</label>
+				<select id="game8" name="game8">
+					<option value="">Please select</option>
+					<option value="Raiders">Raiders</option>
+					<option value="Sharks">Sharks</option>
+				</select>
+			</p>
+		</fieldset>
+		<p>
+			<input type="submit" value="Submit Tips">
+		</p>
+	</form>
+	
+</body>
+</html>

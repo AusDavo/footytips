@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Team Selections</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Team Selections</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Game 1</th>
+                <th>Game 2</th>
+                <th>Game 3</th>
+                <th>Game 4</th>
+                <th>Game 5</th>
+                <th>Game 6</th>
+                <th>Game 7</th>
+                <th>Game 8</th>
+            </tr>
+        </thead>
+        <tbody id="data">
+        </tbody>
+    </table>
+    <script>
+        fetch('http://0.0.0.0:8001/tips.csv')
+            .then(response => response.text())
+            .then(text => {
+                const data = text.split('\n').map(row => row.split(','));
+                const tbody = document.getElementById('data');
+                data.forEach(row => {
+                    const tr = document.createElement('tr');
+                    row.forEach(cell => {
+                        const td = document.createElement('td');
+                        td.textContent = cell;
+                        tr.appendChild(td);
+                    });
+                    tbody.appendChild(tr);
+                });
+            });
+    </script>
+</body>
+
+</html>

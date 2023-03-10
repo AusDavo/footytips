@@ -7,7 +7,7 @@ const path = require('path');
 const app = express();
 const PORT = 8000;
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({extended: true}));
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
@@ -25,7 +25,8 @@ app.post('/submit', (req, res) => {
   const game8 = req.body.game8;
 
   // Store the data in a file
-  const data = `${name},${game1},${game2},${game3},${game4},${game5},${game6},${game7},${game8}\n`;
+  const data = `${name},${game1},${game2},${game3},
+    ${game4},${game5},${game6},${game7},${game8}\n`;
   fs.appendFile(path.join(__dirname, 'tips.csv'), data, (err) => {
     if (err) throw err;
     console.log('Tips saved to file.');
